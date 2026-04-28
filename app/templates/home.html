@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+
+{% block title %}Kauã — Backend Dev & CS Student{% endblock %}
+
+{% block content %}
+
+<!-- ░░ HERO ░░ -->
+<section class="hero">
+
+  <div class="hero__prompt">
+    <span class="prompt-user">kaua</span><span class="prompt-at">@</span><span class="prompt-host">archlinux</span><span class="prompt-sep"> ~ </span><span class="prompt-cmd">$ whoami</span>
+  </div>
+
+  <h1 class="hero__title">
+    Kauã<span class="title-dot">.</span><br>
+    <span class="hero__title--dim">Backend Developer</span><br>
+    <span class="hero__title--accent">&amp; CS Student.</span>
+  </h1>
+
+  <p class="hero__sub">
+    Fascinado por sistemas de baixo nível, performance e a elegância
+    do kernel Linux. Escrevo código que respeita o hardware.
+  </p>
+
+  <div class="hero__meta">
+    <span class="meta-item">
+      <span class="meta-key">distro</span>
+      <span class="meta-val">CachyOS / Arch</span>
+    </span>
+    <span class="meta-sep">//</span>
+    <span class="meta-item">
+      <span class="meta-key">focus</span>
+      <span class="meta-val">backend · systems · perf</span>
+    </span>
+    <span class="meta-sep">//</span>
+    <span class="meta-item">
+      <span class="meta-key">status</span>
+      <span class="meta-val status-open">open to work</span>
+    </span>
+  </div>
+
+  <div class="hero__actions">
+    <a href="/projetos" class="btn btn--primary">
+      <span class="btn__prefix">→</span> ver projetos
+    </a>
+    <a href="#skills" class="btn btn--ghost">
+      <span class="btn__prefix">#</span> stack
+    </a>
+  </div>
+
+</section>
+
+<!-- ░░ SKILLS ░░ -->
+<section class="skills" id="skills">
+
+  <div class="skills__header">
+    <span class="section-tag">// skills</span>
+  </div>
+
+  <div class="skills__grid">
+
+    <div class="skill-card">
+      <div class="skill-card__icon">🐍</div>
+      <div class="skill-card__info">
+        <span class="skill-card__name">Python</span>
+        <span class="skill-card__desc">Flask · FastAPI · scripts</span>
+      </div>
+      <span class="skill-card__level lvl--high">primary</span>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__icon">⚙️</div>
+      <div class="skill-card__info">
+        <span class="skill-card__name">C++</span>
+        <span class="skill-card__desc">sistemas · algoritmos · STL</span>
+      </div>
+      <span class="skill-card__level lvl--mid">learning</span>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__icon">☕</div>
+      <div class="skill-card__info">
+        <span class="skill-card__name">Java</span>
+        <span class="skill-card__desc">OOP · estruturas de dados</span>
+      </div>
+      <span class="skill-card__level lvl--mid">proficient</span>
+    </div>
+
+    <div class="skill-card skill-card--featured">
+      <div class="skill-card__icon">🐧</div>
+      <div class="skill-card__info">
+        <span class="skill-card__name">Linux</span>
+        <span class="skill-card__desc">Arch · CachyOS · kernel · shell</span>
+      </div>
+      <span class="skill-card__level lvl--high">daily driver</span>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__icon">🐳</div>
+      <div class="skill-card__info">
+        <span class="skill-card__name">Docker</span>
+        <span class="skill-card__desc">containers · compose · deploy</span>
+      </div>
+      <span class="skill-card__level lvl--mid">proficient</span>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__icon">🗃️</div>
+      <div class="skill-card__info">
+        <span class="skill-card__name">SQL</span>
+        <span class="skill-card__desc">PostgreSQL · queries · modelagem</span>
+      </div>
+      <span class="skill-card__level lvl--mid">proficient</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ░░ ABOUT ░░ -->
+<section class="about" id="sobre">
+  <span class="section-tag">// sobre</span>
+
+  <div class="about__body">
+    <div class="about__text">
+      <p>
+        Estudante de Ciência da Computação com fixação em entender
+        <em>como as coisas realmente funcionam</em> — do syscall ao
+        HTTP response. Uso Arch porque gosto de montar o sistema do zero.
+      </p>
+      <p>
+        No backend, prefiro código explícito a mágica de framework.
+        Gosto de otimização, profiling e de saber exatamente o que
+        está rodando na minha máquina.
+      </p>
+    </div>
+
+    <div class="about__terminal">
+      <div class="term-header">
+        <span class="term-dot" style="background:#ff5f57"></span>
+        <span class="term-dot" style="background:#febc2e"></span>
+        <span class="term-dot" style="background:#28c840"></span>
+        <span class="term-title">bash</span>
+      </div>
+      <div class="term-body">
+        <p><span class="t-prompt">$</span> <span class="t-cmd">uname -a</span></p>
+        <p class="t-out">Linux cachyos 6.13.0-cachyos #1 SMP x86_64 GNU/Linux</p>
+        <p><span class="t-prompt">$</span> <span class="t-cmd">python --version</span></p>
+        <p class="t-out">Python 3.12.4</p>
+        <p><span class="t-prompt">$</span> <span class="t-cmd">git log --oneline -3</span></p>
+        <p class="t-out"><span class="t-sha">a3f2c1b</span> feat: add contact form handler</p>
+        <p class="t-out"><span class="t-sha">d8e091a</span> refactor: blueprint structure</p>
+        <p class="t-out"><span class="t-sha">12bc44f</span> init: flask factory pattern</p>
+        <p><span class="t-prompt">$</span> <span class="t-cursor">▋</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ CTA ░░ -->
+<section class="cta" id="contato">
+  <p class="section-tag">// próximo passo</p>
+  <h2 class="cta__title">Tem um projeto <span class="accent">interessante?</span></h2>
+  <p class="cta__sub">Adoro problemas que exigem pensar no hardware. Bora conversar.</p>
+  <a href="mailto:seu@email.com" class="btn btn--primary btn--lg">
+    <span class="btn__prefix">✉</span> enviar mensagem
+  </a>
+</section>
+
+{% endblock %}
