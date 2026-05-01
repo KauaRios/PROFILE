@@ -15,13 +15,11 @@
 |---|---|
 | Estrutura Flask (factory pattern) | ✅ Pronto |
 | Rota `/` com `home.html` | ✅ Pronto |
-| Rota `/projetos` | ⚠️ Rota existe, falta o template `projetos.html` |
+| Rota `/projetos` |  `projetos.html` |
 | `home.html` — Hero, Skills, About, CTA | ✅ Pronto |
 | `base.html` — Nav + bloco de conteúdo | ✅ Pronto |
 | `style.css` — Dark mode, responsivo | ✅ Pronto |
 | `.gitignore` | ✅ Pronto |
-| Formulário de contato | ❌ Não iniciado |
-| Integração GitHub API | ❌ Não iniciado |
 | Handlers de erro (404 / 500) | ✅ No `routes.py` corrigido |
 | Deploy / produção | ❌ Não iniciado |
 
