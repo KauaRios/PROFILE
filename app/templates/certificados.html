@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Certificados — Kauã{% endblock %}
+
+{% block content %}
+
+<!-- ░░ HERO CERTIFICADOS ░░ -->
+<section class="hero">
+  <div class="hero__prompt">
+    <span class="prompt-user">kaua</span><span class="prompt-at">@</span><span class="prompt-host">archlinux</span><span class="prompt-sep"> ~ </span><span class="prompt-cmd">$ ls ~/conquistas/certificados</span>
+  </div>
+
+  <h1 class="hero__title">
+    Certificados<span class="title-dot">.</span><br>
+    <span class="hero__title--dim">Formação &amp;</span><br>
+    <span class="hero__title--accent">Especializações.</span>
+  </h1>
+
+  <p class="hero__sub">
+    Documentação da minha jornada em Ciência da Computação e Desenvolvimento Backend.
+    Clique nos itens para validar as credenciais.
+  </p>
+</section>
+
+<!-- ░░ LISTA DE CERTIFICADOS ░░ -->
+<section class="certificados" id="lista-certificados">
+  <div class="skills__header">
+    <span class="section-tag">// conquistas_encontradas</span>
+  </div>
+
+  <div class="certificados-grid">
+    {% for item in meus_certificados %}
+    <div class="certificado-card">
+
+      <div class="certificado-card__header">
+        <h3>{{ item.titulo }}</h3>
+        <span class="certificado-card__instituicao">{{ item.instituicao }}</span>
+      </div>
+
+      <div class="certificado-card__footer">
+        <span class="certificado-card__date">// data: {{ item.data }}</span>
+        <a href="{{ url_for('static', filename='img/certificados/' + item.arquivo) }}"
+           target="_blank"
+           class="btn-cert">
+          [ ver_certificado.sh ]
+        </a>
+      </div>
+
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}

@@ -1,25 +1,24 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}Meu Portfólio{% endblock %}</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Kauã{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
 </head>
 <body>
 
   <nav>
-    <a href="/" class="nav__logo">Kauã.portfolio</a>
+    <a href="/" class="nav__logo">kaua.dev</a>
     <div class="nav__links">
-      <a href="#skills">Stack</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#contato">Contato</a>
+      <a href="/#skills">#skills</a>
+      <a href="/#sobre">#sobre</a>
+      <a href="/certificados">#certificados</a>
     </div>
   </nav>
 
   <div class="container">
-    {% block content %}
-    {% endblock %}
+    {% block content %}{% endblock %}
   </div>
 
 </body>

@@ -1,0 +1,28 @@
+[
+  {
+    "titulo": "Introdução à Cibersegurança",
+    "data": "2026",
+    "instituicao": "Cisco Networking Academy",
+    "arquivo": "cyber.png"
+  },
+  
+
+  {
+    "titulo": "Gerenciamento de ameaças cibernéticas",
+    "data": "2025",
+    "instituicao": "Cisco Networking Academy",
+    "arquivo": "gerenciamentoCyber.png"
+  },
+  {
+    "titulo": "Computer Hardware Basics Course",
+    "data": "2025",
+    "instituicao": "Cisco Networking Academy",
+    "arquivo": "ComputerHardware.png"
+  },
+  {
+    "titulo": "Networking Basics Course",
+    "data": "2025",
+    "instituicao": "Cisco Networking Academy",
+    "arquivo": "Redes.png"
+  }
+]

@@ -434,36 +434,7 @@ nav {
   50%       { opacity: 0; }
 }
 
-/* ══════════════════════════════════════════════════════════════
-   CTA
-══════════════════════════════════════════════════════════════ */
-.cta {
-  padding: 5rem 0 6rem;
-  text-align: center;
-}
 
-.cta .section-tag {
-  display: block;
-  text-align: center;
-  margin-bottom: 1.2rem;
-}
-
-.cta__title {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-  margin-bottom: 1rem;
-}
-
-.accent { color: var(--accent); }
-
-.cta__sub {
-  color: var(--text-dim);
-  font-size: 0.95rem;
-  margin-bottom: 2.2rem;
-  font-weight: 300;
-}
 
 /* ══════════════════════════════════════════════════════════════
    ANIMATIONS
@@ -506,4 +477,146 @@ nav {
   .hero__title { font-size: 2rem; }
   .hero__actions { flex-direction: column; align-items: flex-start; }
   .btn { width: 100%; justify-content: center; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   CERTIFICADOS
+   Sem imagem — card minimalista com botão de link externo
+══════════════════════════════════════════════════════════════ */
+
+.certificados {
+  padding: 4rem 0 6rem;
+  animation: fadeIn 0.5s 0.1s ease both;
+}
+
+/* ── Grid ───────────────────────────────────────────────────── */
+.certificados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* ── Card ───────────────────────────────────────────────────── */
+.certificado-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid rgba(137, 180, 250, 0.15);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.certificado-card:hover {
+  border-color: rgba(137, 180, 250, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(137, 180, 250, 0.07);
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+.certificado-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.2rem 1.4rem 1rem;
+  border-bottom: 1px solid rgba(137, 180, 250, 0.08);
+}
+
+.certificado-card__header h3 {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--green);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.certificado-card__instituicao {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  letter-spacing: 0.03em;
+}
+
+.certificado-card__instituicao::before {
+  content: '$ org: ';
+  color: var(--text-faint);
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.certificado-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.4rem;
+  background: rgba(137, 180, 250, 0.03);
+}
+
+.certificado-card__date {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--yellow);
+  letter-spacing: 0.04em;
+}
+
+/* ── Botão link ─────────────────────────────────────────────── */
+.btn-cert {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--blue);
+  border: 1px solid rgba(137, 180, 250, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 0.3rem 0.7rem;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.btn-cert:hover {
+  background: rgba(137, 180, 250, 0.1);
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+/* ── Responsivo ─────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  .certificados-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificado-card__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+}
+/* ══════════════════════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════════════════════ */
+.footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer__copyright {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.footer__status {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-faint);
 }

@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, abort
+from .utils import carregar_certificados
 
 main = Blueprint('main', __name__)
 
@@ -8,10 +9,11 @@ def principal():
     return render_template('home.html')
 
 
-@main.route('/projetos')
-def projetos():
+@main.route('/certificados')
+def certificados():
+    dados=carregar_certificados()
     # TODO: 
-    return render_template('projetos.html')
+    return render_template('certificados.html',meus_certificados=dados)
 
 
 

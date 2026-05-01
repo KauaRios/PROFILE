@@ -40,11 +40,11 @@ MyPersona/
 │   └── templates/
 │       ├── base.html        # Layout base (nav + {% block content %})
 │       ├── home.html        # Página principal — estende base.html
-│       └── projetos.html    # ⚠️ Ainda não criado
+│       └── certificados.html    # ⚠️ Ainda não criado
 ├── .venv/                   # Ambiente virtual (não vai pro git)
 ├── .env                     # Variáveis de ambiente (não vai pro git)
 ├── .gitignore
-├── requirements.txt         # ⚠️ Ainda não gerado
+├── requirements.txt         
 └── run.py                   # Ponto de entrada — python run.py
 ```
 
@@ -115,7 +115,7 @@ Blueprint `main` com as rotas da aplicação e handlers de erro globais.
 | Método | Rota | Função | Template |
 |---|---|---|---|
 | GET | `/` | `principal()` | `home.html` |
-| GET | `/projetos` | `projetos()` | `projetos.html` ⚠️ |
+| GET | `/certificados` | `certificados()` | `certificados.html` ⚠️ |
 
 Handlers registrados: `404` → `404.html` · `500` → `500.html`
 
